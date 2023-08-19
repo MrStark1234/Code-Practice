@@ -74,17 +74,37 @@ function isArray(arr){
 // console.log(arr2)
 
 
-function cloneArray(arr) {
-  let cloneArr = [];
+// function cloneArray(arr) {
+//   let cloneArr = [];
 
-  if(!Array.isArray(arr)) return console.log("Please provide a valid Array")
+//   if(!Array.isArray(arr)) return console.log("Please provide a valid Array")
 
-  for (let i = 0; i < arr.length; i++) {
+//   for (let i = 0; i < arr.length; i++) {
    
-      cloneArr.push(arr[i]); 
+//       cloneArr.push(arr[i]); 
+//   }
+
+//   return cloneArr;
+// }
+
+// console.log(cloneArray("Suraj"));
+
+
+// Custom spread function
+function customSpread(iterable) {
+  if (!iterable || typeof iterable[Symbol.iterator] !== 'function') {
+    throw new TypeError('Expected an iterable');
   }
 
-  return cloneArr;
+  const result = [];
+  for (const item of iterable) {
+    result.push(item);
+  }
+  return result;
 }
 
-console.log(cloneArray("Suraj"));
+// Usage
+const originalArray = [1, 2, 3];
+const copiedArray = customSpread(originalArray);
+
+console.log(customSpread(12)); // Output: [1, 2, 3]
