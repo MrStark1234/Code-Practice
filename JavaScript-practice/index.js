@@ -56,6 +56,35 @@ function isArray(arr){
     return false
    }
 }
-console.log(isArray(1))
+// console.log(isArray(1))
 
 
+//Q Write a favascript function to clone an array ?
+
+// function cloneArray (arr){
+//   let cloneArr = [...arr]
+//   return cloneArr
+// }
+//  console.log(cloneArray([23,24,25,26,[1,2]]))
+
+// let arr = [1,2,3,4]
+// let arr2 = [...arr]
+
+// arr2.pop()
+// console.log(arr2)
+
+
+function cloneArray(arr) {
+  let cloneArr = [];
+
+  if(!Array.isArray(arr)) return console.log("Please provide a valid Array")
+
+  for (let i = 0; i < arr.length; i++) {
+   
+      cloneArr.push(arr[i]); 
+  }
+
+  return cloneArr;
+}
+
+console.log(cloneArray("Suraj"));
