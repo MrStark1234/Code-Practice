@@ -108,3 +108,11 @@ const originalArray = [1, 2, 3];
 const copiedArray = customSpread(originalArray);
 
 console.log(customSpread(12)); // Output: [1, 2, 3]
+
+
+
+
+hoisting = 6
+
+console.log(hoisting)
+var hoisting                // Not working with let 
