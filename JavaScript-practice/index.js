@@ -107,12 +107,37 @@ function customSpread(iterable) {
 const originalArray = [1, 2, 3];
 const copiedArray = customSpread(originalArray);
 
-console.log(customSpread(12)); // Output: [1, 2, 3]
+// console.log(customSpread(12)); // Output: [1, 2, 3]
 
 
 
 
 hoisting = 6
 
-console.log(hoisting)
+// console.log(hoisting)
 var hoisting                // Not working with let 
+
+
+var x = "3";
+var y = 3;
+// console.log(x*y)
+
+
+
+
+// Q Write a javascript function to get the first element of an array. 
+// Passing a parameter 'n' will return the first 'n' elements of the array.
+// Example:
+// input: console.log(first([1,2,3,4]))      output = [1]
+// input: console.log(first([1,2,3,4],3))      output = [1,2,3]
+
+
+const firstElement = (input,elems=1)=>{
+ let result = []
+ for (let i = 0; i < elems; i++) {
+  result.push(input[i])
+  
+ }
+ return result
+}
+console.log(firstElement([2,5,8,9],3))
